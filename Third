@@ -1,0 +1,33 @@
+package com.tcc.java.programs;
+ 
+import java.util.Scanner;
+ 
+/**
+ * Java Program to find volume and surface area of Cone
+ */
+public class VolumeOfCone {
+ 
+    public static void main(String[] args) {
+        double radius, height, volume, surfaceArea;
+        Scanner scanner;
+        scanner = new Scanner(System.in);
+        // Take input from user
+        System.out.println("Enter the Base Radius of Cone");
+        radius = scanner.nextDouble();
+ 
+        System.out.println("Enter the Height of Cone");
+        height = scanner.nextDouble();
+ 
+        /*
+         * Total surface area of Cone = PI X Radius X (Radius + sqrt(Height^2 +
+         * Radius^2))
+         */
+        surfaceArea = Math.PI * radius * (radius + Math.sqrt(height * height + radius * radius));
+ 
+        /* Volume of Cone = 1/3 X PI X Radius X Radius X Height */
+        volume = 1.0 / 3 * (Math.PI * radius * radius * height);
+ 
+        System.out.format("Surface Area of Cone = %.3f\n", surfaceArea);
+        System.out.format("Volume of Cone = %.3f\n", volume);
+    }
+}
